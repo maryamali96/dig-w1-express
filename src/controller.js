@@ -26,14 +26,10 @@ let posts = [
         content:'content of the post'
     }
 ];
-
-
-
 const getPosts = (request, response)=>{
     // posts = fetch from Database
     response.status(200).json(success(200,posts,"Ok"))
 }
-
 const getPostById = (request, response)=>{
     let id = request.params.id
     // search in db or the list
@@ -54,9 +50,7 @@ const createPost = (request, response)=>{
     }
     posts.push(post)
     response.status(201).json(success(201, post, "Post Created"))
-
 }
-
 const deletePost = (request, response)=>{
     let id = request.params.id
     // search in db or the list
@@ -71,7 +65,6 @@ const deletePost = (request, response)=>{
 
     }  
 }
-
 const updatePost = (request, response)=>{
     let id = request.params.id
     const {title, content} = request.body

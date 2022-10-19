@@ -1,5 +1,4 @@
-
- const success = (message, results, statusCode) => {
+const success = (message, results, statusCode) => {
     return {
       message,
       success: true,
@@ -7,8 +6,6 @@
       results
     };
   };
-  
-
   const error = (message, statusCode) => {
     return {
       message,
@@ -16,9 +13,6 @@
       success: false
     };
   };
-
-
-
 module.exports = {
     success,
     error
